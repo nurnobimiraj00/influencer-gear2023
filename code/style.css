@@ -24,6 +24,10 @@ body {
 
 }
 
+.navbar-1>i,.navbar-1>span>p, .navbar-1> span>ul {
+    display: none;
+}
+
 .navbar-2 ul {
     display: flex;
     gap: 34px;
@@ -155,6 +159,16 @@ body {
 
 }
 
+.box>p>small>i {
+    line-height: 2px;
+    font-size: x-small;
+    color: gold;
+}
+
+.box>p>small>i:nth-last-child(1) {
+    color: gray;
+}
+
 
 /* featured styles */
 
@@ -184,7 +198,8 @@ body {
 
 
 }
-.btn-2{
+
+.btn-2 {
     border-radius: 5px;
 }
 
@@ -195,7 +210,7 @@ body {
     font-size: 24px;
     margin-bottom: 0;
     color: #FFF;
-    font-size:medium;
+    font-size: medium;
 }
 
 .footer {
@@ -205,7 +220,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-    
+
 }
 
 .footer-content {
@@ -217,7 +232,108 @@ body {
     margin: 0;
     font-size: xx-small;
 }
-.icon-foter i{
+
+.icon-foter i {
     margin-right: 5px;
+
+}
+
+/* respondive styles */
+
+@media screen and (max-width:688px) {
+    .navbar-2 {
+        display: none;
+
+    }
+
+    .navbar-1>i {
+        display: block;
+        position: relative;
+        left: 100px;
+        top: 20px;
+
+    }
+    .navbar-1> span > p {
+        display: block;
+        position: relative;
+        right: 100px;
+    }
+    
+
+    .navbar-1 {
+        font-size: 12px;
+        display: flex;
+
+    }
+
+    .nav {
+        margin-top: 10px;
+
+    }
+    .intro-section{
+        /* grid-template-columns: repeat(1,1fr); */
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        /* padding-left: 20px; */
+    }
+    .intro-part-one{
+        width: 100%;
+        
+        
+    }
+    .intro-part-one >h1 , .featured-text >h1{
+        font-size: 25px;
+        
+    }
+    .intro-part-one > p{
+        font-size: 12px;
+        
+    }
+    .intro-part-two{
+        width: 100%;
+    }
+    .intro-part-two > img, .featured-img>img{
+        width: 80%;
+    }
+    .logo-section{
+        width: 100%;
+
+    }
+    .logo{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-row-gap:20px ;
+    }
+    .logo > img{
+        width: 52px;
+        height: 17px;
+        margin-left: 30px;
+    }
+    .boxs{
+        grid-template-columns: repeat(1,1fr);
+        margin-left: 0px;
+        margin-right: 10px;
+    }
+    .popular-collection-div>p {
+       margin-right: 0;
+       margin-top: 10px;
+    }
+    .featured-text > h1{
+        font-size: 25px;
+        line-height: normal;
+        
+        
+    }
+    .featured-text>p{
+        width: 100%;
+        padding-bottom: 50px;
+    }
+    .featured-section-div{
+        flex-direction: column-reverse;
+        margin-left: 0;
+        gap: 10px;
+        padding-left: 0;
+    }
 
 }
